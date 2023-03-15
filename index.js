@@ -14,25 +14,26 @@ function scuberGreetingForFeet(distance){
 
 
 function ternaryCheckCity(city){
-  const newc = "NYC";
-  let mess
-  if(city === newc){
-    mess = "Ok, sounds good.";
-  }else{
-    mess = "No go.";
-  }
+
+  let mess = city === 'NYC'? "Ok, sounds good.":"No go.";
 
   return mess;
 }
 
 function switchOnCharmFromTip(tip){
   let thanks
-  if (tip === 'generous') {
-    thanks = "Thank you so much.";
-  }else if (tip === 'not as generous') {
-    thanks = 'Thank you.';
-  }else{
-    thanks = "Bye.";
+  switch (tip) {
+    case 'generous':
+      thanks = "Thank you so much.";
+      break;
+
+      case 'not as generous':
+      thanks = 'Thank you.';
+      break;
+  
+    default:
+      thanks = "Bye.";
+      break;
   }
 
   return thanks;
